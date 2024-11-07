@@ -22,7 +22,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(0, 168, 117);
+    background-color: #14c14e;
 }
 
 .main {
@@ -102,9 +102,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-    max-width: 100%;
+    max-width: 30%;
 }
-
+img {
+    border-radius: 0cm;
+}
 /* BELOW ARE PREPARED STYLES FOR CODE/PRE/BLOCKQUOTE, FEEL FREE TO REMOVE IT  */
 
 /* Code */

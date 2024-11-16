@@ -1,0 +1,40 @@
+html {
+    font-size: 50%; // Base font size is 50% of the browser's default (8px if default is 16px)
+  }
+  
+  body {
+    font-size: 1.6rem; // Default font size for body text (8px * 1.6 = 12.8px)
+    line-height: 1.5; // Improved readability
+  }
+  
+  p {
+    font-size: 1.2rem; // Slightly larger paragraph text for readability
+    line-height: 1.6; // Maintain proper spacing between lines
+  }
+  
+  .main {
+    max-width: 67rem; // Set a maximum width for the main content
+    margin: 0 auto; // Center the content
+    padding: 1.5rem; // Add padding for content spacing
+    font-size: 1.8rem; // Main content font size (slightly larger)
+    line-height: 1.6; // Maintain good spacing
+  }
+  
+  @media (min-width: 64em) {
+    html {
+      font-size: 62.5%; // Increase the base font size to 62.5% (10px for easier calculations)
+    }
+  
+    body {
+      font-size: 1.8rem; // Increase body font size for larger screens
+    }
+  
+    .main {
+      font-size: 2rem; // Larger font size for main content on larger screens
+    }
+  
+    p {
+      font-size: 1.4rem; // Increase paragraph text size slightly
+    }
+  }
+  

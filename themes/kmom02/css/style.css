@@ -6914,9 +6914,9 @@ blockquote {
 }
 
 /* Responsiv design */
-@media only screen and (max-width: 768px) {
+@media (max-width: 800px) {
   .landing-page {
-    grid-template-columns: 1fr; /* En kolumn på mobil */
+    grid-template-columns: 3fr; /* En kolumn på mobil */
   }
   .box {
     grid-column: span 1; /* Boxar tar hela bredden */
@@ -6944,9 +6944,9 @@ body {
   width: 50%; /* Lägger till bredd */
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .technology .article {
-    width: 90%; /* Lägger till bredd */
+    width: 100%; /* Lägger till bredd */
     grid-column: 1/span 2;
   }
   .technology .menu {

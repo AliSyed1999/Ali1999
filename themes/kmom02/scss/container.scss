@@ -1,129 +1,204 @@
-// Importera Google Fonts och Font Awesome
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-// Variabler
-$medium-border: 1px solid #ccc; // Define medium border size and color
-$color-change-animation-duration: 1s; // Define the duration of the color change
+/* Grundlayout och reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// Grundlayout
 body {
-  font-family: 'Roboto', sans-serif; // Extern font från Google Fonts
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fa; /* Ljus bakgrundsfärg */
+  color: #333;
   display: flex;
   flex-direction: column;
-  align-items: center; // Center content horizontally
-  font-size: clamp(0.8rem, 1vw, 0.9rem); // Responsiv textstorlek (0.8rem till 0.9rem beroende på skärmstorlek)
-  margin: 0; // Remove default margin
-  padding: 0; // Remove default padding
-  animation: colorChange infinite $color-change-animation-duration linear; // Apply color-changing animation
+  align-items: center;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  line-height: 1.6;
+}
 
-  @keyframes colorChange {
-    0% {
-      background-color: #f9c74f; // Golden yellow
-    }
-    33% {
-      background-color: #90be6d; // Pastel green
-    }
-    66% {
-      background-color: #577590; // Muted blue
-    }
-    100% {
-      background-color: #f9c74f; // Back to golden yellow
-    }
+h1, h2, p {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Header */
+.header {
+  background-color: #2a9d8f; /* Mörk turkos */
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header p {
+  font-size: 1.25rem;
+}
+
+/* Main content */
+.main {
+  width: 90%;
+  max-width: 80rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  color: #2a9d8f;
+  margin-bottom: 2rem;
+}
+
+/* Boxar för projekten */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem; /* Reduced gap for a more compact layout */
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 32%; /* Slightly narrower boxes */
+  height: 230px; /* Reduced height */
+  background-color: #0077b6;
+  color: white;
+  border-radius: 6px; /* Smaller border radius */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem; /* Slightly smaller font size */
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+.box:hover {
+  transform: translateY(-5px); /* Less pronounced hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly more visible shadow on hover */
+}
+
+.static {
+  background-color: #48cae4; /* Ljusblå bakgrund */
+}
+
+.subtle {
+  background-color: #90e0ef;
+  animation: pulsate-bg 10s linear infinite;
+}
+
+.colorful {
+  background-color: #f7b731;
+  animation: pulsate 100s linear infinite;
+}
+
+/* Animationer för bakgrundsfärger */
+@keyframes pulsate {
+  0% { background-color: #f7b731; }
+  20% { background-color: #f94d40; }
+  40% { background-color: #5f27cd; }
+  60% { background-color: #2980b9; }
+  80% { background-color: #2ecc71; }
+  100% { background-color: #f7b731; }
+}
+
+@keyframes pulsate-bg {
+  0% { background-color: #90e0ef; }
+  50% { background-color: #48cae4; }
+  100% { background-color: #90e0ef; }
+}
+
+/* Footer */
+.footer {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #f4a261;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .header {
-    width: 100%; // Full width for header
-    padding: 1rem; // Add padding for spacing
-    text-align: center; // Center align text
-    background-color: #f94144; // Warm red
-    font-size: clamp(1rem, 1.5vw, 1.1rem); // Responsiv textstorlek för header
-    border: $medium-border; // Apply medium border
-    color: #fff;
-
-    i {
-      margin-left: 0.5rem;
-    }
-  }
-
-  .main {
-    width: 90%; // Adjust width for smaller screens
-    max-width: 64rem; // Maximum width for larger screens
-    padding: 1.5rem; // Add padding for content spacing
-    margin: 2rem auto; // Center main content with top/bottom margin
-    background-color: #f9844a; // Bright orange
-    border: $medium-border; // Apply medium border
-    border-radius: 8px; // Add rounded corners
-
-    h1 {
-      font-size: clamp(1rem, 2vw, 1.2rem); // Responsiv textstorlek för huvudrubrik
-      margin-bottom: 1rem; // Add spacing below headline
-      color: #fff;
-    }
-
-    .description {
-      font-size: clamp(0.7rem, 1.1vw, 0.9rem); // Responsiv textstorlek för beskrivning
-      border: $medium-border; // Apply medium border
-      padding: 0.5rem; // Add padding inside description
-      border-radius: 4px; // Rounded corners for description box
-      max-height: 3rem; // Limit description height
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: #333;
-    }
-  }
-
-  .footer {
-    width: 100%; // Full width for footer
-    padding: 1rem 2rem; // Space inside footer
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; // Space items evenly
-    align-items: center; // Vertically center content
-    background-color: #43aa8b; // Teal green
-    font-size: clamp(0.7rem, 1vw, 0.9rem); // Responsiv textstorlek för footer
-    border-top: 4px solid #34495e; // Stylish top border
-    color: #fff;
-
-    .social-icons {
-      display: flex; // Lay out icons in a row
-      i {
-        margin-right: 0.5rem;
-        font-size: 1rem; // Justera storleken på ikoner
-        transition: color 0.3s;
-
-        &:hover {
-          color: #f9c74f; // Highlight on hover
-        }
-      }
-    }
-
-    .github-link {
-      text-decoration: none; // Remove underline
-      color: #fff;
-      display: flex;
-      align-items: center;
-
-      i {
-        margin-right: 0.5rem;
-        font-size: 1.2rem; // GitHub icon size
-      }
-
-      &:hover {
-        color: #f39c12; // Orange color on hover
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .footer {
-      flex-direction: column; // Stack footer elements vertically
-      text-align: center;
-
-      .social-icons {
-        margin-bottom: 1rem; // Add spacing below icons
-      }
-    }
+  .box {
+    width: 80%;
+    margin-bottom: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.75rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 90%;
+  }
+}
+
+

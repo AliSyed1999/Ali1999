@@ -1,0 +1,28 @@
+{% include "incl/header.twig" %}
+
+<body>
+    {% include "incl/nav.twig" %}
+
+    <div class="main technology" role="main">
+        <aside class="menu">
+            <h2>Meny</h2>
+        </aside>
+
+        <article class="article">
+            {{ content }}
+        </article>
+
+        <div class="grid-container">
+            <div class="git {% if move_git_down %}move-down{% endif %}">
+                GitHub
+            </div>
+
+            <div class="sqlite {% if move_sqlite_down %}move-down{% endif %}">
+                SQLite
+            </div>
+        </div>
+    </div>
+
+    {% include "incl/footer.twig" %}
+</body>
+</html>

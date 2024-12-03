@@ -1,3 +1,4 @@
+@import 'variables-dark.scss';
 @import '../../node_modules/normalize.css/normalize';
 @import 'variables';
 @import 'blockquotes';
@@ -13,5 +14,6 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import 'typography.scss';
 @import 'footer.scss';
 @import 'technology.scss';
+
 
 

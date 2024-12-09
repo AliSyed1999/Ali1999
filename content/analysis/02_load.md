@@ -59,6 +59,9 @@ De tre webbplatserna visar olika prestandanivåer i fråga om laddningstid:
 Genom att använda teknologier som Lazy Loading och Bildkomprimering kan alla tre webbplatser förbättra sina laddningstider ytterligare och ge användarna en bättre upplevelse.
 
 ---
+---
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR45DAs1OE7v76YfZE0kIZTwvpqNllCbt_NgclKCHQgf-0LzsJEgpYwtfmtJHdcP5hNVCjmVPK-ar-4/pubhtml?widget=true&amp;headers=false"></iframe>
+---
 
 #### Referenser
 

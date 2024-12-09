@@ -92,10 +92,11 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #3d5a80;
   color: #fff;
 }
+
 .technology {
   display: grid;
   grid-template-columns: auto auto;
@@ -123,11 +124,16 @@ body {
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
+h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {

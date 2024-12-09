@@ -38,7 +38,7 @@ DBWebb använder en enkel och stabil design där mörkblått och grönt främjar
 De tre webbplatserna tillämpar olika designprinciper som är väl anpassade till deras respektive varumärken:
 
 -Webhallen: Fokus på enkelhet, balans och tydlighet.
--Adobe**: Dynamisk design som speglar kreativitet och innovation.
+-Adobe: Dynamisk design som speglar kreativitet och innovation.
 -DBWebb: Enkel, stabil och användarcentrerad design.
 
 ---
